@@ -1,0 +1,64 @@
+<!doctype html>
+	<html>
+		<head>
+			<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+			<script src="scripts/jquery-2.2.4.min.js"></script>
+			<script src="scripts/popup.js"></script>
+			<title>KIWI PRO</title>
+		</head>
+		
+		<body style="padding: 5px;margin:10px;min-width:300px;min-height:150px;font-family: 'Raleway', sans-serif; text-align:center;">
+			
+			<!--license-->
+			<div id="licensediv" style="display:none;">	
+				<form>
+					<div class="form-group">
+						<div id="invalidlicense" style="display:none;"><center style="font-weight:bold;color:#AA2200;">The license you have entered is not valid.</center></div>
+						<input style="margin-top:25px;margin-bottom:25px;" type="text" id="license" class="form-control" name="license" placeholder="Please enter your UNIVERSAL license...">
+						<center><button class="btn btn-lg btn-block btn-warning" type="button" id="checklicense">Activate License</button></center>
+					</div>
+				</form>
+			</div>
+			
+			<!--loading-->
+			<div id="loading" style="display:none;">
+				<img src="images/loading.gif" width="250"><br>
+				<div id="status">Please make sure you are logged in Seller Central!</div>
+				<div id="step"></div>
+				<div id="active"></div>
+				<div id="processed-status"></div>
+				<p style="margin-top:25px;"><a class="btn btn-lg btn-block btn-danger" href="#" id="stopall">Stop All Connections</a></p>
+			</div>
+			
+						
+			<div id="download-section" style="display:none;">
+				<a target="_blank" class="btn btn-lg btn-block btn-info" href="https://landscapesheets.com/template">Latest Google Sheets Template</a><br>
+				<a target="_blank" class="btn btn-lg btn-block btn-info" href="https://landscapesheets.com/sop">Latest SOP for building LS</a><br>
+				<a class="btn btn-lg btn-block btn-warning" href="#" id="a-organic">Download Organic Spreadsheet</a><br>
+				<a class="btn btn-lg btn-block btn-success" href="#" id="donedownloading">Done Downloading!</a>
+			</div>
+			
+			<!--screen 1-->
+			<div id="screen1" style="display:none;">
+			<img src="images/icon128.png" height="128">
+			<div id="download-link"></div>
+			<form>
+				<div class="form-group">
+					<textarea style="margin-top:5px;margin-bottom:5px;" rows="15" id="asins" class="form-control" name="asins" placeholder="Enter ASINs (one per line)"></textarea>
+					<center style="margin-top:10px;"><button class="btn btn-lg btn-block btn-success" type="button" id="research">Extract & Analyze Keywords</button></center>
+					<div id="options" style="margin-top:50px;">
+						<h3>Advanced Optional Settings:</h3>
+						<small>please do not change these settings unless you know what you're doing</small>
+						<p>Entity ID: <input id="entityid" class="form-control" value="NOT FOUND"></p>
+						<p>Max. HTTP Connections: <input id="maxconnections" class="form-control"></p>
+						<p>AJAX Delay (in seconds): <input id="ajaxdelay" class="form-control"></p>
+						<p>AJAX Timeout (in seconds): <input id="ajaxtimeout" class="form-control"></p>
+					</div>
+				</div>
+			</form>
+			</div>
+			
+		<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1300999583322509&ev=PageView&noscript=1" />
+		</body>
+	</html>

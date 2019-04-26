@@ -1,0 +1,45 @@
+	{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "Reviews Trend",
+	"description": "Download reviews, analyze reviews trend.",
+	"version": "2.2",
+	
+	"web_accessible_resources": [
+    "images/*.*","options.html"],
+
+	"browser_action": 
+		{
+		"default_icon": 
+			{
+			"19": "images/icon19.png",
+			"38": "images/icon38.png"
+			}
+		},
+	"background": 
+		{
+		"scripts": ["scripts/jquery-2.2.4.min.js","scripts/support/background.js","scripts/count/bg.js"]
+		},
+	"icons": 
+		{ 
+		"16": "images/icon16.png",
+		"48": "images/icon48.png",
+		"128": "images/icon128.png" 
+		},
+	"content_scripts": 
+		[{
+		"matches": ["*://*.amazon.com/*/B0*","*://*.amazon.co.uk/*/B0*","*://*.amazon.es/*/B0*","*://*.amazon.nl/*/B0*","*://*.amazon.mx/*/B0*","*://*.amazon.co.jp/*/B0*","*://*.amazon.it/*/B0*","*://*.amazon.in/*/B0*","*://*.amazon.de/*/B0*","*://*.amazon.fr/*/B0*","*://*.amazon.fr/*/B0*","*://*.amazon.cn/*/B0*","*://*.amazon.ca/*/B0*","*://*.amazon.com.br/*/B0*","*://*.amazon.com.au/*/B0*"],
+		"js": ["scripts/jquery-2.2.4.min.js","scripts/plotly-latest.min.js","scripts/trend/content.js","scripts/reviews/content.js"]
+		},
+		{
+		"matches": ["http://*/*", "https://*/*"],
+		"js": ["scripts/jquery-2.2.4.min.js","scripts/count/content.js"],
+		"all_frames": true
+		}],
+	"permissions": 
+		[
+		"activeTab", "storage", "tabs", "contextMenus"
+		]
+	}

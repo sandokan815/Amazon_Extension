@@ -1,0 +1,71 @@
+<!doctype html>
+	<html>
+		<head>
+			<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+			<script src="scripts/jquery-2.2.4.min.js"></script>
+			<script src="scripts/popup.js"></script>
+			<title>Copy DNA</title>
+		</head>
+		
+		<body style="padding: 5px;margin:10px;min-width:300px;min-height:150px;font-family: 'Raleway', sans-serif;">
+			
+			<!--header-->
+			<center><img src="images/icon128.png" height="32"></center>
+			<p style="font-family:Calibri;font-size:12pt;margin-top:5px;margin-bottom:5px; text-align:center;"><a href="#" id="shlink1">Listen to the Elevated Ecommerce podcast w/ Ben Cummings &amp; Traian Turcu</a></p>
+		
+			<!--license-->
+			<div id="licensediv" style="display:none; text-align:center;">	
+				<form>
+					<div class="form-group">
+						<div id="invalidlicense" style="display:none;"><center style="font-weight:bold;color:#AA2200;">The license you have entered is not valid.</center></div>
+						<input style="margin-top:25px;margin-bottom:25px;" type="text" id="license" class="form-control" name="license" placeholder="Please enter your license...">
+						<center><button class="btn btn-lg btn-block btn-warning" type="button" id="checklicense">Activate License</button></center>
+					</div>
+				</form>
+			</div>
+			
+			<!--loading-->
+			<div id="loading" style="display:none; text-align:center;">
+				<img src="images/loading.gif"><br>
+				<div id="status"></div>
+			</div>
+			
+			<!--screen 1-->
+			<div id="screen1" style="display:none;">
+			<form>
+				<div class="form-group" style="margin-top:15px;">
+					Include the following ratings:
+					<select name="rating_choice" id="rating_choice" style="display:inline;margin-left:5px;">
+						  <option value="all_stars" selected>All</option>
+						  <option value="positive">All positive</option>
+						  <option value="critical">All negative</option>
+						  <option value="five_star">5 stars only</option>
+						  <option value="four_star">4 stars only</option>
+						  <option value="three_star">3 stars only</option>
+						  <option value="two_star">2 stars only</option>
+						  <option value="one_star">1 star only</option>
+					</select>
+				</div>
+				<div class="form-group" style="margin-top:15px;">
+					Get phrases up to <input type="text" class="form-control" name="words" id="words" size="2" style="width:50px;display:inline" value="7"> words long.
+				</div>
+				<div class="form-group" style="margin-top:15px;">
+					<b>ASINs To Scrape</b>
+					<textarea style="margin-top:5px;margin-bottom:5px;" rows="10" id="asins" class="form-control" name="asins" placeholder="Enter ASINs (one per line)"></textarea>
+				</div>
+				<div class="form-group" style="margin-top:15px;">
+					<input type="checkbox" id="ignore"> <label for="ignore"><b>Stop Words To Ignore</b></label>
+					<textarea style="margin-top:5px;margin-bottom:5px;display:none;" rows="5" id="stopwords" class="form-control" name="stopwords"></textarea>
+				</div>
+
+				
+				<div class="form-group">
+					<center style="margin-top:10px;"><button class="btn btn-lg btn-block btn-success" type="button" id="analyze">Get Phrase Frequency Spreadsheet</button></center>
+				</div>
+			</form>
+			</div>
+			
+		<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1300999583322509&ev=PageView&noscript=1" />
+		</body>
+	</html>

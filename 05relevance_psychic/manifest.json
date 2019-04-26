@@ -1,0 +1,40 @@
+	{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "Relevance Psychic",
+	"description": "Discover Keywords & Their Relevance Scores.",
+	"version": "4.4",
+	
+	"web_accessible_resources": ["images/*.*","scripts/inject.js"],
+
+	"browser_action": 
+		{
+		"default_icon": 
+			{
+			"19": "images/icon19.png",
+			"38": "images/icon38.png"
+			}
+		},
+	"background": 
+		{
+		"scripts": ["scripts/background.js"]
+		},
+	"icons": 
+		{ 
+		"16": "images/icon16.png",
+		"48": "images/icon48.png",
+		"128": "images/icon128.png" 
+		},
+	"content_scripts": 
+		[{
+		"matches": ["*://*.amazon.com/*/B0*"],
+		"js": ["scripts/jquery-2.2.4.min.js","scripts/content.js"]
+		}],
+	"permissions": 
+		[
+		"activeTab", "storage", "tabs", "clipboardWrite", "*://*.amazon.com/*", "http://*/*", "https://*/*"
+		],
+	"content_security_policy": "script-src 'self' https://relevancespy.com https://connect.facebook.net https://www.facebook.com; object-src 'self'"
+	}

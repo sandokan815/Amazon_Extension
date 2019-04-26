@@ -1,0 +1,65 @@
+<!doctype html>
+	<html>
+		<head>
+			<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+			<script src="scripts/jquery-2.2.4.min.js"></script>
+			<script src="scripts/popup.js"></script>
+			<title>Relevance Psychic</title>
+		</head>
+		
+		<body style="padding: 5px;margin:10px;min-width:300px;min-height:150px;font-family: 'Raleway', sans-serif; text-align:center;">
+			
+			<!--header-->
+			<img src="images/icon128.png" height="128">
+			<p style="font-family:Calibri;font-size:12pt;margin-top:5px;margin-bottom:5px;">created by <a href="#" id="shlink1">Traian</a></p>
+			<p>(this app only works if you are logged in ams.amazon.com)</p>
+		
+			<!--license-->
+			<div id="licensediv" style="display:none;">	
+				<form>
+					<div class="form-group">
+						<div id="invalidlicense" style="display:none;"><center style="font-weight:bold;color:#AA2200;">The license you have entered is not valid.</center></div>
+						<input style="margin-top:25px;margin-bottom:25px;" type="text" id="license" class="form-control" name="license" placeholder="Please enter your license...">
+						<center><button class="btn btn-lg btn-block btn-warning" type="button" id="checklicense">Activate License</button></center>
+					</div>
+				</form>
+			</div>
+			
+			<!--loading-->
+			<div id="loading" style="display:none;">
+				<img src="images/loading.gif"><br>
+				<div id="status"></div>
+			</div>
+			
+			<!--screen 1-->
+			<div id="screen1" style="display:none;">
+			<form>
+				<div class="form-group">
+					<select class="form-control" id="marketplace">
+						<option value="com" selected>Amazon.com</option>
+						<option value="co.uk">Amazon.co.uk</option>
+						<option value="es">Amazon.es</option>
+						<option value="nl">Amazon.nl</option>
+						<option value="com.mx">Amazon.com.mx</option>
+						<option value="co.jp">Amazon.co.jp</option>
+						<option value="it">Amazon.it</option>
+						<option value="in">Amazon.in</option>
+						<option value="de">Amazon.de</option>
+						<option value="fr">Amazon.fr</option>
+						<option value="cn">Amazon.cn</option>
+						<option value="ca">Amazon.ca</option>
+						<option value="com.br">Amazon.com.br</option>
+						<option value="com.au">Amazon.com.au</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<textarea style="margin-top:5px;margin-bottom:5px;" rows="15" id="datain" class="form-control" name="datain" placeholder="Enter data (one per line)"></textarea>
+					<center style="margin-top:10px;"><button class="btn btn-lg btn-block btn-success" type="button" id="dosomeaction">Do Some Action</button></center>
+				</div>
+			</form>
+			</div>
+			
+		<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1300999583322509&ev=PageView&noscript=1" />
+		</body>
+	</html>

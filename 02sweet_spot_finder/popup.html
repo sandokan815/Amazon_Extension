@@ -1,0 +1,75 @@
+<!doctype html>
+	<html>
+		<head>
+			<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+			<script src="scripts/jquery-2.2.4.min.js"></script>
+			<script src="scripts/popup.js"></script>
+			<title>Sweet Spot Finder</title>
+		</head>
+		
+		<body style="padding: 5px;margin:10px;min-width:300px;min-height:150px;font-family: 'Raleway', sans-serif; text-align:center;">
+			
+			<!--header-->
+			<img id="logo" src="images/icon128.png" height="128">
+		
+			<!--license-->
+			<div id="licensediv" style="display:none;">	
+				<form>
+					<div class="form-group">
+						<div id="invalidlicense" style="display:none;"><center style="font-weight:bold;color:#AA2200;">The license you have entered is not valid.</center></div>
+						<input style="margin-top:25px;margin-bottom:25px;" type="text" id="license" class="form-control" name="license" placeholder="Please enter your license...">
+						<center><button class="btn btn-lg btn-block btn-warning" type="button" id="checklicense">Activate License</button></center>
+					</div>
+				</form>
+			</div>
+			
+			<!--loading-->
+			<div id="loading" style="display:none;">
+				<img src="images/logo.gif"><br>
+				<div id="status"></div>
+			</div>
+			
+			<!--opportunities-->
+			<div id="opp" style="margin-top:25px;margin-bottom:25px;"></div>
+			
+			<!--status-->
+			<div id="status" style="margin-top:25px;margin-bottom:25px;"></div>
+			
+			<!--screen 1-->
+			<div id="screen1" style="display:none;">
+			<form>
+
+				<div class="form-group">
+					<label for="cat">Target Category</label>
+					<select type="text" name="cat" class="form-control" id="cat">
+						<option value="0">All</option>
+						<option value="13">Baby</option>
+						<option value="14">Automotive</option>
+						<option value="15">Electronics</option>
+						<option value="16">Home Improvement</option>
+						<option value="17">Home &amp; Garden</option>
+						<option value="18">Health &amp; Personal Care</option>
+						<option value="19">Industrial &amp; Scientific</option>
+						<option value="20">Office Products</option>
+						<option value="21">Sports & Outdoors</option>
+						<option value="22">Toys</option>
+						<option value="23">Beauty</option>
+						<option value="25">Pet Supplies</option>
+						<option value="24">Other</option>
+						
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="minvol">Min. Monthly Search Volume:</label>
+					<input type="text" name="minvol" class="form-control" id="minvol" placeholder="Minimum Monthly Search Volume" value="3000">
+				</div>
+				<div class="form-group">
+					<center style="margin-top:10px;"><button class="btn btn-lg btn-block btn-success" type="button" id="showme10">Find 10 Random Opportunities</button></center>
+				</div>
+			</form>
+			</div>
+			
+		<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1300999583322509&ev=PageView&noscript=1" />
+		</body>
+	</html>
