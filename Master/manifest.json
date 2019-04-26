@@ -1,0 +1,49 @@
+{
+  "background": {
+    "scripts": [
+      "scripts/background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icon19.png",
+      "38": "images/icon38.png"
+    },
+    "default_popup": "load_popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "scripts/content.js"
+      ],
+      "matches": [
+        "\u003Call_urls>"
+      ]
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://connect.facebook.net https://www.facebook.com; object-src 'self'",
+  "description": "Master dashboard for all our extensions",
+  "icons": {
+    "128": "images/icon128.png",
+    "16": "images/icon16.png",
+    "48": "images/icon48.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhQpaolAOSdLt2XwOqT3vufcWLp7Ia+PdATge1SGHKlbiSGXhdMAi9N+8ciftkJTRmQ+1zbdiUoxJw46UaE7E/ChcWFd0DHUUdD44ESc52rxwNyhkWUB26nX7maDM+yI6Uz1DF1gFVCpAk++LAimF4o0e0q7yf6WxEJqankZcgoKmnK4I9eUhUG8GbieAZH3UqxBHvepbhrlfL282NCjk+1fV183eBJnHPsgYulqgBkeYFW7LpWyq98vh5Dq4tX7RzZYXTgYuFu8GJNXcNrR+kHR/a23qNqfKkyizw0bIN9lg+vyrf/EPxIJCyevy9jN8oxMEBUQUyzKHBYM2Kx/ODQIDAQAB",
+  "manifest_version": 2,
+  "name": "Master App",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "clipboardWrite",
+    "*://*.amazon.com/*",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "2.6",
+  "web_accessible_resources": [
+    "images/*.*",
+    "scripts/inject.js"
+  ]
+}
