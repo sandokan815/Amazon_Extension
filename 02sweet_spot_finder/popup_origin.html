@@ -13,6 +13,17 @@
 			<!--header-->
 			<img id="logo" src="images/icon128.png" height="128">
 		
+			<!--license-->
+			<div id="licensediv" style="display:none;">	
+				<form>
+					<div class="form-group">
+						<div id="invalidlicense" style="display:none;"><center style="font-weight:bold;color:#AA2200;">The license you have entered is not valid.</center></div>
+						<input style="margin-top:25px;margin-bottom:25px;" type="text" id="license" class="form-control" name="license" placeholder="Please enter your license...">
+						<center><button class="btn btn-lg btn-block btn-warning" type="button" id="checklicense">Activate License</button></center>
+					</div>
+				</form>
+			</div>
+			
 			<!--loading-->
 			<div id="loading" style="display:none;">
 				<img src="images/logo.gif"><br>
@@ -26,7 +37,7 @@
 			<div id="status" style="margin-top:25px;margin-bottom:25px;"></div>
 			
 			<!--screen 1-->
-			<div id="screen1">
+			<div id="screen1" style="display:none;">
 			<form>
 
 				<div class="form-group">
