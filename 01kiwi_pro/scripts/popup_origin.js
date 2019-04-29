@@ -900,6 +900,38 @@ function extract_parents() {
   });
 }
 
+// function check_seller_central_origin() {
+//   $("#screen1").hide();
+//   $("#loading").show();
+//   $.ajax(
+//     {
+//       url: "https://sellercentral.amazon.com/cm",
+//       type: "GET",
+//     })
+//     .always(function (data) {
+//       var regex = /customerId:[\s\:]+\"([A-Za-z0-9]+?)\"/gms;
+//       var x2 = "";
+//       var x1 = regex.exec(data);
+//       if (x1 && x1.length > 1)
+//         x2 = x1[1];
+//       if (x2.length > 10 && x2.length < 20) {
+//         mid = x2;
+//         console.log("seller id", mid);
+//         $("#screen1").show();
+//         $("#loading").hide();
+//         $("#status").html("");
+//       }
+//       else {
+//         $("#status").html("<span style=\"color:#A00;\">Sorry, KIWI only works if you are logged in a Seller Central account with enabled advertising.</a>");
+//         // setTimeout(check_seller_central, 3000);
+//       }
+//     })
+//     .fail(function (data) {
+//       $("#status").html("<span style=\"color:#A00;\">Sorry, KIWI only works if you are logged in your Seller Central account.</a>");
+//       // setTimeout(check_seller_central, 3000);
+//     });
+// }
+
 function check_entityid() {
   $("#screen1").show();
   $("#loading").hide();
@@ -909,6 +941,50 @@ function check_entityid() {
   $("#entityid").val(entityid);
 }
 
+// function check_entityid_origin() {
+//   $("#screen1").hide();
+//   $("#loading").show();
+//   $.ajax(
+//     {
+//       url: "https://sellercentral.amazon.com/cm",
+//       type: "GET",
+//     })
+//     .always(function (data) {
+
+//       var regex2 = /entityId:[\s\:]+\"([A-Za-z0-9]+?)\"/gms;
+//       var y = regex2.exec(data);
+//       if (y && y[1] && y[1].indexOf("ENTITY") == 0) {
+//         entityid = y[1];
+//         console.log("entity id", entityid);
+//         $("#entityid").val(entityid);
+//       }
+//       else {
+//         $("#status").html("<span style=\"color:#A00;\">Sorry, we couldn't connect to the advertising API.</a>");
+//         $("#entityid").val("NOT FOUND");
+//       }
+//     });
+// }
+
+// function check_entityid() {
+//   $("#status").html("");
+//   var entityid = 'ENTITY34ZJOI2MHPGP2';
+//   $("#entityid").val(entityid);
+// }
+
+// function check_license(license) {
+//   $.get(check_url + license, function (data) {
+//     if (data.indexOf("ok") !== -1) {
+//       chrome.storage.local.set({ 'licenseok': license });
+//       $("#licensediv").hide();
+//       $("#status").html("Making sure you are logged in Seller Central");
+//       check_seller_central();
+//       check_entityid();
+//     }
+//     else {
+//       $("#invalidlicense").show();
+//     }
+//   });
+// }
 
 $(document).ready(function () {
 
@@ -952,6 +1028,22 @@ $(document).ready(function () {
   $("#status").html("Making sure you are logged in Seller Central");
   check_entityid();
 
+  // chrome.storage.local.get('licenseok', function (result) {
+  //   licenseok = result.licenseok;
+  //   if (licenseok) {
+  //     $("#status").html("Making sure you are logged in Seller Central");
+  //     check_seller_central();
+  //     check_entityid();
+  //   }
+  //   else {
+  //     $("#licensediv").show();
+  //   }
+  // });
+
+  // $("#checklicense").click(function () {
+  //   var license = $("#license").val();
+  //   check_license(license);
+  // });
 
   $("#research").click(function () {
     maxconnections = $("#maxconnections").val();

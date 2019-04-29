@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+
+<body>
+  <script>
+    var regex = /customerId:[\s\:]+\"([A-Za-z0-9]+?)\"/gms;
+    var data = ' "isSpoofer": "false", "deviceType": "Browser", "marketplace": "SellerCentral:NA", "userOS": "Windows","session": "137-9583817-7965125","sellerFeatures": "SILVER|CLICK_WITHIN_ADVERTISER","userAgent": "Chrome 73.0.3683.103","customerId": "A2XQ6VKZ0VHN49",  "tenure": ""'
+    var x1 = regex.exec(data);
+    console.log(x1);
+    </script>
+    </body>
