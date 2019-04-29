@@ -16,24 +16,6 @@ var check_url = "https://ssfinder.com/check/?license=";
 var madebylink = "https://sellerhacks.com";
 var license = "123456789";
 
-// function check_license(license) {
-//   $.ajax({
-//     url: check_url + license,
-//     license: license,
-//     success: function (data) {
-//       if (data.indexOf("ok") !== -1) {
-//         console.log("valid license");
-//         chrome.storage.local.set({ 'license': this.license });
-//         $("#licensediv").hide();
-//         $("#screen1").show();
-//       }
-//       else {
-//         $("#invalidlicense").show();
-//       }
-//     }
-//   });
-// }
-
 function open_extension(id, license) {
   chrome.runtime.sendMessage(id, { openExtension: license },
     function (response) {
@@ -57,9 +39,9 @@ $(document).ready(function () {
   //   open_extension("heeipmpoidaibpidnglmdpkgkbbdfgih", license);
   // });
 
-  // $("#sweespotfinder").click(function () {
-  //   open_extension("ldhdaemcehnllbmelccmndkooaigbbia", license);
-  // });
+  $("#sweespotfinder").click(function () {
+    open_extension("ldhdaemcehnllbmelccmndkooaigbbia", license);
+  });
 
   // $("#roicalculator").click(function () {
   //   open_extension("annakeopimipeipaoehmdjjmhncpliin", license);
@@ -81,13 +63,13 @@ $(document).ready(function () {
   //   open_extension("ijjlmpjjhdpmljaoldhmpccdfemdfoda", license);
   // });
 
-  // $("#reviewlookup").click(function () {
-  //   open_extension("apflbegbdkgaphcefkgaahopndcgcbhl", license);
-  // });
+  $("#reviewlookup").click(function () {
+    open_extension("apflbegbdkgaphcefkgaahopndcgcbhl", license);
+  });
 
-  // $("#asinscraper").click(function () {
-  //   open_extension("beobbcenalldkidigcbmekhgaoccfkcm", license);
-  // });
+  $("#asinscraper").click(function () {
+    open_extension("beobbcenalldkidigcbmekhgaoccfkcm", license);
+  });
 
 
 
